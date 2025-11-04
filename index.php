@@ -1,4 +1,5 @@
 <?php
+require_once "resultado.php";
 session_start();
 
 /*
@@ -87,11 +88,12 @@ $remaining = $MAX_ATTEMPTS - count($_SESSION['attempts']);
   <?php else: ?>
     <div class="result">
       <?php if ($won): ?>
-        <h3>🎉 ¡Correcto! El número era <?= htmlspecialchars($secret) ?>.</h3>
+              <?php $view = new Resultado() ?>
+
       <?php else: ?>
-        <h3>❌ Sin intentos. El número era <?= htmlspecialchars($secret) ?>.</h3>
+      <?php $view = new Resultado() ?>
       <?php endif; ?>
-      <p><a href="?reset=1"><button>Jugar otra vez</button></a></p>
+      <?php $view = new Resultado() ?>
     </div>
   <?php endif; ?>
 
