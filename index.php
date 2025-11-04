@@ -75,7 +75,9 @@ background-color= red;
 .container{
 font-size: 20px;
 }
-
+h2{
+color: red;
+}
 </styles>
 <meta charset="utf-8">
 <title>Mastermind Numérico</title>
